@@ -9,16 +9,16 @@ public class Card {
         this.denomination = denomination;
     }
 
-    public String getSuit(){
+    public char getSuit(){
         switch(suit){
-            case 0: return "C";
-            case 1: return "D";
-            case 2: return "H";
-            default: return "S";
+            case 0: return 'C';
+            case 1: return 'D';
+            case 2: return 'H';
+            default: return 'S';
         }
     }
     
-    public String getValue(){
+    public char getValue(){
         switch(denomination){
             case 0:
             case 1:
@@ -27,12 +27,12 @@ public class Card {
             case 4: 
             case 5: 
             case 6:
-            case 7:return Integer.toString(denomination + 2);
-            case 8: return "T";
-            case 9: return "J";
-            case 10: return "Q";
-            case 11: return "K";
-            default: return "A";
+            case 7:return Integer.toString(denomination + 2).charAt(0);
+            case 8: return 'T';
+            case 9: return 'J';
+            case 10: return 'Q';
+            case 11: return 'K';
+            default: return 'A';
 
         }
     }

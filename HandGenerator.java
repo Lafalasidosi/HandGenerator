@@ -3,8 +3,6 @@ public class HandGenerator {
 
         Deck myDeck = new Deck();
 
-        myDeck.display();
-
         System.out.println();
 
         Player[] table = {new Player("North"), new Player("East"), new Player("South"), new Player("West")};
@@ -13,7 +11,8 @@ public class HandGenerator {
 
         for(Player p : table){
             p.sortHand();
-            p.showHand();
+            System.out.println(p.handToString());
+            
         }
 
         myDeck.display();

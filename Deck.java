@@ -32,8 +32,8 @@ public class Deck {
         int length = deck.size();
         for(int i = 0; i < length; i++){
             if(i % 13 == 0)
-                System.out.printf("%s", deck.get(i).getSuit());
-            System.out.printf("%s", deck.get(i).getValue());
+                System.out.printf("%c", deck.get(i).getSuit());
+            System.out.printf("%c", deck.get(i).getValue());
             if(i % 13 == 12)
                 System.out.println();
         }
