@@ -28,6 +28,14 @@ public class Deck {
         }
     }
 
+    public void returnCardsToDeck(Player[] table){
+        for(Player p: table){
+            for(int i = 0; i < 13; i++){
+                deck.add(p.removeCard());
+            }
+        }
+    }
+
     public void display(){
         int length = deck.size();
         for(int i = 0; i < length; i++){

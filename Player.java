@@ -22,6 +22,13 @@ public class Player {
         hand.add(c);
     }
 
+    // remove card(s)
+    public Card removeCard(){
+        Card result = hand.get(0);
+        hand.remove(0);
+        return result;
+    }
+
     public void sortHand(){
         // sort by suit then by value
         hand.sort(Comparator.comparing(Card::getSuit).thenComparing(Card::getDenomination).reversed());
